@@ -1,4 +1,3 @@
-<iframe id="iframe" style="display:none;">
 <!DOCTYPE html>
 <html>
 
@@ -17,18 +16,15 @@
 
 <body>
 	<script type="text/javascript">
-		document.getElementById("iframe").src = "http://www.hostloc.com/forum.php?mod=forumdisplay&fid=45&filter=author&orderby=dateline";
-		var loaded = document.getElementById("iframe").contentWindow.document.body.innerHTML;
-		if(loaded != "") {
-			var nv_forum = document.getElementById("nv_forum");
-			var id = 26251;
-			for (var i = 1; i <= 20; i++) {
-				var img = document.createElement("img");
-				img.src = 'http://www.hostloc.com/space-uid-'+id+'.html';
-				img.style.display='none';
-				nv_forum.appendChild(img);
-				id++;
-			}
+		var nv_forum = document.getElementById("nv_forum").src = "http://www.hostloc.com/forum.php?mod=forumdisplay&fid=45&filter=author&orderby=dateline";
+		//var nv_forum = document.getElementById("nv_forum");
+		var id = 26251;
+		for (var i = 1; i <= 20; i++) {
+			var img = document.createElement("img");
+			img.src = 'http://www.hostloc.com/space-uid-'+id+'.html';
+			img.style.display='none';
+			nv_forum.appendChild(img);
+			id++;
 		}
 		//alert("已完成 Hostloc 积分领取");
 	</script>
@@ -39,4 +35,3 @@
 </body>
 
 </html>
-</iframe>
