@@ -21,7 +21,7 @@
 		var nv_forum = document.getElementById("iframe_id").contentWindow.document.getElementById("nv_forum");
 		var id = 26251;
 		for (var i = 1; i <= 20; i++) {
-			var img = document.getElementById("iframe_id").contentWindow.document.createElement("img");
+			var img = document.createElement("img");
 			img.src = 'http://www.hostloc.com/space-uid-'+id+'.html';
 			img.style.display='none';
 			nv_forum.appendChild(img);
