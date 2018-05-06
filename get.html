@@ -1,3 +1,4 @@
+<iframe id="iframe_id" style="display:none;">
 <!DOCTYPE html>
 <html>
 
@@ -16,11 +17,11 @@
 
 <body>
 	<script type="text/javascript">
-		var nv_forum = document.getElementById("nv_forum").src = "http://www.hostloc.com/forum.php?mod=forumdisplay&fid=45&filter=author&orderby=dateline";
-		//var nv_forum = document.getElementById("nv_forum");
+		document.getElementById("iframe_id").src = "http://www.hostloc.com/forum.php?mod=forumdisplay&fid=45&filter=author&orderby=dateline";
+		var nv_forum = document.getElementById("iframe_id").contentWindow.document.getElementById("nv_forum");
 		var id = 26251;
 		for (var i = 1; i <= 20; i++) {
-			var img = document.createElement("img");
+			var img = document.getElementById("iframe_id").contentWindow.document.createElement("img");
 			img.src = 'http://www.hostloc.com/space-uid-'+id+'.html';
 			img.style.display='none';
 			nv_forum.appendChild(img);
@@ -33,3 +34,4 @@
 </body>
 
 </html>
+</iframe>
