@@ -1,0 +1,48 @@
+<iframe id="iframe" style="display:none;">
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta http-equiv="Cache-Control" content="no-transform">
+	<meta name="applicable-device" content="pc,mobile">
+	<meta name="referrer" content="no-referrer">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Hostloc - 访问该地址即刷分</title>
+	<link href="https://static.sometimesnaive.org:9004/deps/imgs/favicon.ico" type="image/x-icon" rel="icon">
+</head>
+
+<body>
+	<script type="text/javascript">
+		document.getElementById("iframe").src = "http://www.hostloc.com/forum.php?mod=forumdisplay&fid=45&filter=author&orderby=dateline";
+		var loaded = document.getElementById("iframe").contentWindow.document.body.innerHTML;
+		if(loaded != "") {
+			var nv_forum = document.getElementById("nv_forum");
+			var id = 26251;
+			for (var i = 1; i <= 20; i++) {
+				var img = document.createElement("img");
+				img.src = 'http://www.hostloc.com/space-uid-'+id+'.html';
+				img.style.display='none';
+				nv_forum.appendChild(img);
+				id++;
+			}
+		}
+		//alert("已完成 Hostloc 积分领取");
+	</script>
+
+	<pre>
+		已完成 Hostloc 积分领取！
+		</br>
+		倒数 5 秒后跳转至 Hostloc 论坛！
+	</pre>
+
+	<script type="text/javascript">
+		setTimeout(window.location.href='http://www.hostloc.com/forum.php?mod=forumdisplay&fid=45&filter=author&orderby=dateline', 5);
+	</script>
+</body>
+
+</html>
+</iframe>
